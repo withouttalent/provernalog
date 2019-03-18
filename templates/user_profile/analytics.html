@@ -1,0 +1,30 @@
+{% extends 'provernalog/base.html' %}
+{% load static %}
+{% block head %}
+    <script type="text/javascript" src="https://konyakov.ru/pubs/rr/jquery.min.js"></script>
+    <script type="text/javascript" src="https://konyakov.ru/pubs/rr/script.js"></script>
+    <script type="text/javascript">$(function() {$('.map').maphilight();});</script>
+    <script type="text/javascript" src="https://konyakov.ru/pubs/rr/tooltip.js"></script>
+    <link rel="stylesheet" href="{% static 'provernalog/css/analytics.css' %}">
+    <link rel="stylesheet" href="{% static 'provernalog/css/search.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="block analytics">
+{% include 'user_profile/map.html' %}
+    <div class="left_goal">Последние аналитические обзоры:</div>
+<div class="report">
+{% if reports %}
+    {% for report in reports %}
+        <div class="block_information {% cycle '' 'white' %}">
+        <div class="wrap_information">
+            <div class="name_information"><a class="white-link" href="/report/{{ report.id }}">{{ report.title }}</a></div>
+        </div>
+        <div class="value_information">{{ report.date_added }}</div>
+        </div>
+    {% endfor %}
+{% endif %}
+</div>
+</div>
+{% endblock %}

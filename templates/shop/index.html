@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'shop/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="wrap_why">
+        {% for product in products %}
+            <div class="product">
+            <div class="product_img">
+                <a class="white-link" href="/shop/product/{{ product.id }}/">
+                    <img style="width: 100%" src="{{ product.image.url }}" alt="Иконка товара" />
+                </a>
+            </div>
+                <a class="white-link" href="/shop/products/{{ product.id }}/"><div class="product_title">{{ product.title }}</div></a>
+                <div class="product_price">Стоимость: {{ product.price }} рублей</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

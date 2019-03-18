@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'shop/css/order.css' %}">
+    <script>
+        function show() {
+            style = document.getElementById('order').style;
+            if (style.bottom === '-426px') {
+                style.bottom = '0';
+            } else {
+                style.bottom = '-426px';
+            }
+        }
+    </script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="wrap_why">
+        <div class="product">
+            <div class="product_img"><img src="{{ product.image.url }}" alt="Картинка товара"></div>
+            <div class="product_title">{{ product.title }}</div>
+            <div class="product_body">{% autoescape off %}{{ product.body }}{% endautoescape %}</div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block fixed_content %}
+<div id="order" style="display: block;bottom: -426px;" class="order">
+    <div class="order_spoiler" onclick="show()">Оплатить</div>
+    <form action="/" method="post" class="order_buy">
+        {% csrf_token %}
+        {% for f in form %}
+            <div class="order_group">
+                {{ f }}
+            <div class="wrap_input"></div>
+            </div>
+        {% endfor %}
+        <div class="good_price">Стоимость: {{ product.price }} руб.</div>
+        <button>Купить</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'provernalog/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'provernalog/css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add_service.css' %}">
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'provernalog/js/toggle.js' %}"></script>
+    <script src="{% static 'js/fetch_rosreestr.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% if thanks %}
+    <div class="content_appeal">{{ thanks }}</div>
+    {% endif %}
+    <div class="block content_result">
+        <div class="result__top_text">Данные объекта</div>
+<div class="result__top_sub_text">в соответствии с отчетом (проектом отчета) о кадастровой оценке на 2019 год
+</div>
+<div class="egrn"><img class="svg_quote" src="{% static 'images/icons/new-file.png' %}" alt="">Характеристики объекта приводятся по данным отчета (проекта отчета) с сохранением орфографии, возможных ошибок или опечаток.
+Сверьте эти характеристики с имеющимися у вас данными — это может существенно влиять на величину кадастровой стоимости.
+</div>
+<div class="egrn"><img class="svg_quote" src="{% static 'images/icons/new-file.png' %}" alt="">Если по какой-либо из характеристик "нет данных" - это может говорить о том, что значения характеристик либо отсутствуют
+в отчете об оценке, либо они по каким-то причинам не были получены при
+автоматизированной обработке исходной информации.</div>
+<div class="egrn"><img class="svg_quote" src="{% static 'images/icons/new-file.png' %}" alt="">Внимание! В некоторых случаях для объектов, по которым кадастровая стоимость была установлена в размере рыночной
+(производилась процедура оспаривания) или стоимость изменялась по иным причинам, действующая (предыдущая) кадастровая стоимость
+может отображаться без учёта данных изменений.</div>
+<div class="main_information">
+    {% include 'provernalog/block_information.html' with parcel=parcel.current_specification title=parcel.current %}
+    {% include 'provernalog/block_information.html' with parcel=parcel.new_specification title=parcel.new %}
+    {% include 'provernalog/form_email.html' with subject_form=subject_form word_form=word_form order_form=order_form cadastral_number=parcel.parcel.cadastral_number %}
+    {% include 'provernalog/rosreestr.html' with cadastral_number=parcel.parcel.cadastral_number %}
+    </div>
+    </div>
+{% endblock %}

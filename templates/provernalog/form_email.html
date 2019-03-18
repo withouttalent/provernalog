@@ -1,0 +1,54 @@
+{% load static %}
+
+<div class="addition"><b>
+    Узнайте какие ценовые факторы и как повлияли
+    на стоимость данного объекта,</b> как скорректировать
+    новую кадастровую стоимость и возможную
+    недостоверную информацию об объекте, а также
+</div>
+<button id="support_form_spoiler" class="send_cadastral button_spoiler">Узнать ценовые факторы</button>
+<form id="support_form" class="form_contact" method="POST">
+    {% csrf_token %}
+    {% for support in support_form %}
+        {% if support.name == "cadastral_number" %}
+            {{ support }}
+        {% else %}<div class="group">
+            {{ support }}
+        </div>
+        {% endif %}
+    {% endfor %}
+    <div class="group">
+        <button name="factors" value="1" class="send_cadastral">
+            Узнать ценовые факторы
+        </button>
+    </div>
+</form>
+<div class="addition">
+    <b>Cкачайте форму Заявления в ГБУ</b> об исправлении ошибок, допущенных при определении кадастровой стоимости,
+    и предоставлении разъяснений, связанных с определением кадастровой стоимости:
+</div>
+<div class="egrn">
+        <img class="svg_quote" src="{% static 'images/icons/new-file.png' %}" alt="">
+        В ближайшее время мы отправим письмо с подробностями на вашу электронную почту.
+        Для автоматического заполнения Заявления в ГБУ необходимо указать ФИО в родительном падеже,
+        например «Иванова Ивана Ивановича», а в поле Адрес указать адрес регистрации заявителя (адрес объекта вводить
+        не надо, он проставится автоматически, если информация о нём есть в базе данных)
+</div>
+<button id="word_form_spoiler" class="send_cadastral button_spoiler">Получить заявление в ГБУ</button>
+<form id="word_form" class="form_contact" method="POST">
+    {% csrf_token %}
+    {% for support in word_form %}
+        {% if support.name == "cadastral_number" %}
+            {{ support }}
+        {% else %}
+            <div class="group">
+            {{ support }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="group">
+        <button name="word" value="1" class="send_cadastral">
+            Получить заявление в ГБУ
+        </button>
+    </div>
+</form>

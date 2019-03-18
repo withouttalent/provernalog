@@ -1,0 +1,65 @@
+{% extends 'admin/index.html' %}
+
+{% load humanize %}
+{% load static %}
+
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'admin/css/custom_filter.css' %}">
+{% endblock%}
+
+
+{% block extrahead %}
+
+{% endblock %}
+
+
+{% block content_title %}
+    <h1> Статистика объектов </h1>
+{% endblock %}
+{% block content %}
+    <div class="main_content">
+        <div class="parcel_information">Общее количество объектов: {{ parcel.count_parcel|intcomma }}</div>
+        <div class="parcel_information">Текущая цена объектов: {{ parcel.common_current_cost|intcomma }}</div>
+        <div class="parcel_information">Промежуточная цена объектов: {{ parcel.common_cost_intermediate|intcomma }}</div>
+        <div class="parcel_information">Утвержденная цена объектов: {{ parcel.common_approved_cost|intcomma }}</div>
+
+        <div class="light_title">Для промежуточной стоимости</div>
+
+        <div class="parcel_information">Количество подорожавших объектов: {{ parcel_df_up.count|intcomma }}</div>
+        <div class="parcel_information">Суммарная текущая стоимость подорожавших объектов: {{ parcel_df_up.current_cost__sum|intcomma }}</div>
+        <div class="parcel_information">Суммарная промежуточная стоимость подорожавших объектов: {{ parcel_df_up.cost_intermediate__sum|intcomma }}</div>
+        <div class="parcel_information">Количество подешевевших объектов: {{ parcel_df_down.count|intcomma }}</div>
+        <div class="parcel_information">Суммарная текущая стоимость подешевевших объектов: {{ parcel_df_down.current_cost__sum|intcomma }}</div>
+        <div class="parcel_information">Суммарная промежуточная стоимость подешевевших объектов: {{ parcel_df_down.cost_intermediate__sum|intcomma }}</div>
+
+        <div class="light_title">Для утвержденной стоимости</div>
+
+        <div class="parcel_information">Количество подорожавших объектов: {{ parcel_adf_up.count|intcomma }}</div>
+        <div class="parcel_information">Суммарная текущая стоимость подорожавших объектов: {{ parcel_adf_up.current_cost__sum|intcomma }}</div>
+        <div class="parcel_information">Суммарная промежуточная стоимость подорожавших объектов: {{ parcel_adf_up.approved_cost__sum|intcomma }}</div>
+        <div class="parcel_information">Количество подешевевших объектов: {{ parcel_adf_down.count|intcomma }}</div>
+        <div class="parcel_information">Суммарная текущая стоимость подешевевших объектов: {{ parcel_adf_down.current_cost__sum|intcomma }}</div>
+        <div class="parcel_information">Суммарная промежуточная стоимость подешевевших объектов: {{ parcel_adf_down.approved_cost__sum|intcomma }}</div>
+    </div>
+    <div class="filter_form">
+        <form action="" method="post" class="parcel_filter__form">
+            {% csrf_token %}
+            {% for form in parcel_form %}
+                <div class="form_block">
+                    <h2 class="prepare_h2">{{ form.label_tag }}</h2>
+                    {{ form }}
+                </div>
+            {% endfor %}
+            <button>Фильтровать</button>
+        </form>
+    <form action="/admin/provernalog/parcelstatic/import-excel/" method="get">
+        {% for form in parcel_form %}
+            {{ form.as_hidden }}
+        {% endfor %}
+        <button class="download-detail">Загрузить</button>
+        </form>
+    </div>
+{% endblock %}
+{% block sidebar %}{% endblock %}
+{% block pagination %}{% endblock %}

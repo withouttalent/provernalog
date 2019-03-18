@@ -1,0 +1,27 @@
+
+.privacy {
+    background-color: #ffffff;
+    color: #000000;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 44px;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+.privacy__top_text {
+    width: 95%;
+}
+
+.privacy__main_text {
+    font-family: "PT Sans";
+    font-size: 22px;
+    font-weight: normal;
+    width: 85%;
+}
+
+@media screen and (max-device-width: 600px) {
+    .privacy__main_text {
+        width: 95%;
+    }
+}

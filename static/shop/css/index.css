@@ -1,0 +1,39 @@
+
+.product {
+    width: 90%;
+    height: 160px;
+    background-color: #eff6fb;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.product:hover {
+    background-color: rgba(62, 141, 101, 0.2);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.product_img {
+    width: 120px;
+    float: left;
+}
+
+.product_title {
+    font-size: 22px;
+    float: left;
+    font-family: "PT Sans";
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.product_price {
+    font-size: 22px;
+    font-family: "PT Sans";
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+}

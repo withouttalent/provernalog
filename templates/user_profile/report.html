@@ -1,0 +1,18 @@
+{% extends 'provernalog/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'provernalog/css/analytics.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="block report_content">
+    <div class="report">
+        <div class="report_title">{{ report.title }}</div>
+        <div class="main_text_pt_22 report_text color_black">{% autoescape off %}{{ report.text }}{% endautoescape %}</div>
+        <div class="report_date_added">Дата размещения: {{ report.date_added }}</div>
+    </div>
+    </div>
+
+{% endblock %}

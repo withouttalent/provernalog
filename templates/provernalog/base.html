@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title }} | ПроверьНалог</title>
+    <script type="text/javascript" src="{% static 'provernalog/js/metrika.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/50553784" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <link rel="stylesheet" href="{% static 'provernalog/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'provernalog/css/index.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="content">
+        {% include 'provernalog/components/header.html' %}
+        {% block content %}{% endblock %}
+        {% include 'provernalog/components/footer.html' %}
+    </div>
+</body>
+</html>

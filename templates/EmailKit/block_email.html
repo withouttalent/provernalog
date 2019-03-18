@@ -1,0 +1,7 @@
+<td style="padding-left: 40px;font-size: 20px; font-weight: bold; height: 80px">{{ title }}</td>
+    {% for item, value in parcel %}
+        <tr style="font-size: 18px;width: 100%;height: 62px;{% cycle 'background-color: #DDF0FF;' 'background-color:#FFFFFF' %}">
+        <th style="text-align: start; padding-left: 40px; width: 65%">{{ item }}</th>
+        <th style="padding-right: 30px; width: 35%; text-align: end;">{{ value|default_if_none:"Нет данных" }}</th>
+        </tr>
+    {% endfor %}

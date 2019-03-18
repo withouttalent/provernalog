@@ -1,0 +1,376 @@
+
+.header {
+    background-color: #012982;
+}
+
+.header_logo, .header_nav__element, .header_help__text {
+    color: #ffffff;
+}
+
+.svg_quote {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.content_result {
+    background-color: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.result__top_text {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: start;
+    font-family: Roboto;
+}
+
+.result__top_sub_text {
+    margin-top: 10px;
+}
+
+.main_information {
+    width: 82%;
+    text-align: center;
+}
+
+.content_appeal {
+    width: 1440px;
+    font-size: 17px;
+    color: #ffffff;
+    top: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #65d72b;
+}
+
+.egrn {
+    font-size: 16px;
+    font-family: PT Sans;
+    width: 80%;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.block_information {
+    font-family: PT Sans;
+    font-size: 18px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #DDF0FF;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.left_goal {
+    font-size: 22px;
+    margin-top: 50px;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 20px;
+    float: left;
+    font-family: Fira Sans;
+}
+
+.value_information {
+    width: 38%;
+    overflow: auto;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.factor_information {
+    border: 2px solid #1a628e;
+}
+
+.factor_block {
+    height: 60px;
+    border-bottom: 2px solid #1a628e;
+    text-align: center;
+}
+
+.factor_block:hover {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ca5757;
+    -webkit-box-shadow: 0px 9px 38px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 38px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 38px 1px rgba(0,0,0,0.75);
+}
+
+.factor-wrap {
+    width: 60%;
+    float: left;
+    height: 60px;
+    overflow: auto;
+    border-right: 2px solid #1a628e;
+}
+
+
+.factor_name {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.factor_value {
+    width: 39%;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    overflow: auto;
+}
+
+.name_information {
+    width: 100%;
+}
+
+.wrap_information {
+    width: 62%;
+    padding-left: 80px;
+    display: flex;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap_pre_information {
+    width: 15%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.addition {
+    font-family: Roboto;
+    margin-top: 68px;
+    position: relative;
+    float: left;
+    font-size: 30px;
+    text-align: start;
+    width: 100%;
+}
+
+.send_cadastral {
+    font-size: 18px;
+    font-family: "PT Sans";
+    border: 0 none;
+    text-align: center;
+    background: #0263B2;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 326px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.policy {
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.group {
+    float: left;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 326px;
+}
+
+input {
+    width: 100%;
+    height: 63px;
+    color: #000000;
+    padding-left: 10px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+}
+
+.addition__vector {
+    position: absolute;
+    bottom: -10px;
+    right: -26px;
+    width: 30px;
+}
+
+.form_contact {
+    margin-top: 70px;
+    float: left;
+    width: 738px;
+}
+.maint_text_pt_14 {
+    font-family: PT Sans;
+    font-size: 14px;
+    color: #000000;
+    float: left;
+    margin-top: 75px;
+    position: relative;
+    margin-left: 0px;
+    text-align: start;
+    width: 217px;
+    height: 131px;
+}
+
+.wrap_source {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.none_number {
+    width: 50%;
+    font-weight: normal;
+    position: relative;
+    margin-top: 20px;
+}
+
+.none_number__main_text {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.word_button {
+    width: 78%;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 63px;
+    padding-top: 15px;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    font-family: "PT Sans";
+    box-sizing: border-box;
+}
+
+.rosreestr_content {
+    float: left;
+    width: 100%;
+}
+
+#support_form {
+    display: none;
+}
+
+#word_form {
+    display: none;
+}
+
+.button_spoiler {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.rosreestr_spoiler {
+    font-size: 18px;
+    font-family: "PT Sans";
+    border: 0 none;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+    background: #0263B2;
+    border-radius: 10px;
+    width: 100%;
+    color: #fff;
+    line-height: 63px;
+    float: left;
+    height: 63px;
+    font-weight: 300;
+}
+
+@media only screen and (max-device-width: 600px) {
+    .main_information {
+        width: 95%;
+    }
+
+    .result__top_text {
+        font-size: 60px;
+    }
+
+    .result__top_sub_text {
+        width: 90%;
+        margin-top: 10px;
+        font-family: PT sans;
+        font-size: 38px;
+    }
+
+    .egrn {
+        font-size: 32px;
+        width: 92%;
+    }
+
+    .left_goal {
+        font-size: 45px;
+    }
+
+    .block_information {
+        font-size: 32px;
+    }
+
+    .wrap_information {
+        padding-left: 30px;
+    }
+
+    .addition {
+        font-size: 42px;
+    }
+
+    .send_cadastral {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .form_contact {
+        width: 100%;
+    }
+
+    .group {
+        width: 95%;
+    }
+
+    input {
+        font-size: 38px;
+        padding-left: 38px;
+        height: 93px;
+    }
+
+    .rosreestr_spoiler {
+        padding-top: 10px;
+        height: 93px;
+        font-size: 38px;
+    }
+
+    .wrap_source {
+        width: 95%;
+    }
+
+    .none_number {
+        width: 95%;
+    }
+}

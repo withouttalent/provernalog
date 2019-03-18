@@ -1,0 +1,119 @@
+
+
+.about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.about__top_text {
+    font-family: "Roboto";
+    font-size: 44px;
+    font-weight: bold;
+    width: 80%;
+    float: left;
+}
+
+.about__main_text {
+    font-family: "PT Sans";
+    font-size: 22px;
+    text-indent: 30px;
+    width: 80%;
+    float: left;
+    margin-top: 40px;
+    text-align: justify;
+}
+
+.about__bottom {
+    float: left;
+    width: 90%;
+    padding: 32px 56px 32px 56px;
+    background-color: #0263B2;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.about__bottom_top_text {
+    font-size: 22px;
+    font-family: "PT Sans";
+    margin-bottom: 40px;
+}
+
+.about__bottom_img {
+    width: 226px;
+    height: 243px;
+    float: left;
+}
+
+.about__bottom_main_text {
+    font-family: "PT Sans";
+    font-size: 16px;
+    width: 40%;
+    text-align: justify;
+    float: left;
+    margin-left: 30px;
+}
+
+.about__sub {
+    font-family: "PT Sans";
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    width: 21%;
+    margin-top: 135px;
+    float: right;
+}
+
+.vector_service {
+    position: absolute;
+    top: 13px;
+    left: -32px;
+    width: 37px;
+}
+
+.about__sub_text {
+    font-size: 16px;
+    margin-right: 22px;
+    float: right;
+    margin-top: 15px;
+    position: relative;
+    font-weight: normal;
+}
+
+.service_icon {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: -37px;
+    top: 0;
+}
+
+@media screen and (max-device-width: 600px) {
+
+    .about__top_text {
+        font-size: 60px;
+    }
+
+    .about__main_text {
+        width: 95%;
+    }
+
+    .about__bottom {
+        width: 95%;
+    }
+
+    .about__bottom_main_text {
+        width: 67%;
+        font-size: 30px;
+    }
+
+    .about__sub {
+        font-size: 34px;
+        width: 35%;
+    }
+
+    .about__sub_text {
+        font-size: 26px;
+    }
+}

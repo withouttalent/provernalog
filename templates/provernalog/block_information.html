@@ -1,0 +1,9 @@
+<div class="left_goal">{{ title }}</div>
+{% for item, value in parcel %}
+    <div class="block_information {% cycle "" "white" %}">
+        <div class="wrap_information">
+            <div class="name_information">{{ item }}:</div>
+        </div>
+        <div class="value_information">{{ value|default_if_none:"Нет данных" }}</div>
+    </div>
+{% endfor %}

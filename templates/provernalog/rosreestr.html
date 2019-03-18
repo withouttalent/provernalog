@@ -1,0 +1,12 @@
+{% load static %}
+<div class="rosreestr_content">
+    <div id="rosreestr_spoiler" class="rosreestr_spoiler">&#8595 Информация Росреестра &#8595</div>
+    <div class="rosreestr" id="rosreestr">
+        {% include 'provernalog/block_information.html' with parcel=parcel.rosreestr title="Информация Росреестра" %}
+        <div class="egrn">
+            <img class="svg_quote" src="{% static 'images/icons/new-file.png' %}" alt="">
+            Если Вы заметили, что данные ПроверьНалог и данные Росреестра отличаются, сообщите
+            нам об этом по электронной почте info@provernalog.ru.
+        </div>
+    </div>
+</div>

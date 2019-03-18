@@ -1,0 +1,47 @@
+{% extends 'admin/change_list.html' %}
+{% load humanize %}
+{% load static %}
+
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/add_service.css' %}">
+{% endblock%}
+
+
+
+
+{% block extrahead %}
+
+{% endblock %}
+
+
+{% block content_title %}
+    <h1> Статистика объектов </h1>
+{% endblock %}
+{% block result_list %}
+<table border="1">
+   <tr>
+        <th>Регион</th>
+        <th>Город</th>
+        <th>Кол-во объектов</th>
+        <th>Кол-во объектов с текущей стоимостью</th>
+        <th>Кол-во объектов с промежуточной стоимостью</th>
+        <th>Кол-во объектов с утвержденной стоимостью</th>
+        <th>Кол-во объектов с группировкой</th>
+   </tr>
+    {% for parcel in parcels %}
+        <tr>
+            <th>{{ parcel.region }}</th>
+            <th><a href="{{ parcel.region }}">{{ parcel.city }}</a></th>
+            <th>{{ parcel.cadastral_number__count| intcomma }}</th>
+            <th>{{ parcel.current_cost__count| intcomma }}</th>
+            <th>{{ parcel.cost_intermediate__count| intcomma }}</th>
+            <th>{{ parcel.approved_cost__count| intcomma }}</th>
+            <th>{{ parcel.group_appraise__count| intcomma }}</th>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+{% block pagination %}{% endblock %}

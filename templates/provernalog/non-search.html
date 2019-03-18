@@ -1,0 +1,46 @@
+{% extends 'provernalog/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'provernalog/css/search.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="block content_result">
+<div class="result__top_text">Данные объекта</div>
+<div class="none_number left_goal">
+Информация об объекте с кадастровым номером
+<b>{{request.GET.cadastral_number}}</b> отсутствует в базе данных,
+либо кадастровый номер введён неверно
+</div>
+    <div style="text-align: center; width: 80%" class="left_goal none_number__main_text">Информация загруженная на сайт:</div>
+    <div class="wrap_source">
+    <div class="block_information white">
+        <div class="wrap_pre_information">
+            <div class="name_information">№ региона</div>
+        </div>
+        <div style="width: 45%; padding-left: 0;text-align: center;" class="wrap_information">
+            <div class="name_information">Наименование региона</div>
+        </div>
+        <div style="width: 45%; padding-left: 0;text-align: center;" class="wrap_information">
+            <div class="name_information">Виды объектов</div>
+        </div>
+        <div class="value_information"><span style="font-weight: normal;">Дата актуальности информации</span></div>
+        </div>
+    {% for report in source_reports %}
+        <div class="block_information {% cycle '' 'white' %}">
+        <div class="wrap_pre_information">
+            <div class="name_information">{{ report.region.region }}</div>
+        </div>
+        <div style="width: 45%; padding-left: 0;text-align: center;" class="wrap_information">
+            <div class="name_information">{{ report.region.name }}</div>
+        </div>
+        <div style="width: 45%; padding-left: 0;text-align: center;" class="wrap_information">
+            <div class="name_information">{{ report.title }}</div>
+        </div>
+        <div class="value_information"><span style="font-weight: normal;">{{ report.date_relevance }}</span></div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

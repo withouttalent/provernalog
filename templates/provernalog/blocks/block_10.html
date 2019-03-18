@@ -1,0 +1,43 @@
+{% load static %}
+<div class="block block_10">
+    <div class="block_10__top_text">
+        Сведения об объектах в Кадастре зачастую неточны. Это приводит к печальным ситуациям:
+    </div>
+    <div class="block_10__main_text">
+        <div class="block_10__main_left">
+            <img src="{% static 'images/icons/error.png' %}" alt="" class="block_10__main_left_img">
+            Отсутствует точный вид разрешённого использования земельного участка
+        </div>
+        <div class="block_10__main_right">
+            В поле "вид разрешённого использования" было указано "поджилой дом" или "под
+            строительство жилья". У ГБУ не было фактической информации, что на участке
+            размещен небольшой индивидуальный жилой дом. Земельный участок в 30 соток был
+            оценён как под «строительство многоквартирного жилого дома».
+            Кадастровая стоимость оказалась завышенной многократно.
+        </div>
+    </div>
+    <div class="block_10__main_text">
+        <div class="block_10__main_left">
+            <img src="{% static 'images/icons/error.png' %}" alt="" class="block_10__main_left_img">
+            Неверно указана площадь квартиры
+        </div>
+        <div class="block_10__main_right">
+            Вместо 57,6 кв.м. в ячейку «площадь» попала информация о годе постройке дома — 2011.
+            Кадастровая стоимость и налог были завышены в 2011/57,6 ~ 35 раз.
+        </div>
+    </div>
+    <div class="block_10__main_text">
+        <div class="block_10__main_left">
+            <img src="{% static 'images/icons/error.png' %}" alt="" class="block_10__main_left_img">
+            Ошибочно учтены факторы, влияющие на цену объекта
+        </div>
+        <div class="block_10__main_right">
+            Некорректно учтен класс качества здания – вместо «стандарт» расчеты проведены
+            по более дорогому «премиум». Данная ошибка привела к завышению кадастровой
+            стоимости и налога на ~ 20%.
+        </div>
+    </div>
+    <a href="#search">
+        <input type="button" class="block_10__button block_2__button" value="Проверьте кадастровую стоимость">
+    </a>
+</div>

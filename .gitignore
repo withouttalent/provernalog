@@ -1,0 +1,15 @@
+venv/
+logs/
+backup/
+.idea
+.vscode/
+.debris
+__pycache__
+*.zip
+*.xml
+*.xlsx
+*.conf
+upload/
+tn/settings.py
+settings.py
+provernalog.sock

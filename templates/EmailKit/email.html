@@ -1,0 +1,26 @@
+<style>
+@media only screen and (max-width: 800px) {
+    tr[class="pre-inform"] {
+        width: 100% !important;
+    }
+}
+</style>
+<table cellspacing="0" cellpadding="0" style="max-width: 100%">
+<caption style="text-align: start;margin-left: 60px; font-size: 24px; font-weight: bold">Данные объекта</caption>
+<tbody style="margin-top: 20px;">
+    <tr style="text-align: justify; text-indent: 60px;">
+        <td class="pre-inform">
+        На сайте <a href="provernalog.ru" target="_blank">ПроверьНалог</a>
+        вы обратились за получением дополнительной информации
+        из проекта отчета об определении кадастровой стоимости.
+        Данные объекта в соответствии с проектом отчета о кадастровой оценке на 2019 год
+        Характеристики объекта приводятся по данным ЕГРН с сохранением орфографии,
+        возможных ошибок или опечаток. Сверьте эти характеристики с имеющимися у вас
+        данными — это может существенно влиять на величину кадастровой стоимости.
+        </td>
+    </tr>
+    {% include 'EmailKit/block_email.html' with title=parcel.current parcel=parcel.current_specification %}
+    {% include 'EmailKit/block_email.html' with title=parcel.new parcel=parcel.new_specification %}
+    {% include 'EmailKit/block_email.html' with title="Ценообразующие факторы" parcel=parcel.factors %}
+</tbody>
+</table>

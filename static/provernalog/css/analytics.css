@@ -1,0 +1,84 @@
+
+.analytics {
+    background-color: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+
+#tooltip {
+    background:#FFFFFF;
+    border:1px solid #666666;
+    color:#333333;
+    font:menu;
+    margin:10px;
+    padding:3px 5px;
+    position:absolute;
+    visibility:hidden
+    }
+
+.map {
+    width: 800px;
+    height: 485px;
+}
+
+table {
+    border: 1px solid #000000;
+}
+
+td {
+    border: 1px solid #000000;
+}
+
+.reports {
+    width: 60%;
+}
+
+.report {
+    width: 85%;
+}
+
+.report_title {
+    text-align: center;
+    margin-top: 52px;
+    font-family: "Roboto";
+    font-size: 28px;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+}
+
+.report_text {
+    float: left;
+    white-space: unset;
+    text-align: justify;
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: "Roboto";
+}
+
+.report_date_added {
+    float: left;
+    width: 85%;
+    margin-top: 40px;
+    font-family: "Roboto";
+    font-size: 22px;
+}
+
+.report_content {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background-color: #ffffff;
+}
+
+@media screen and (max-device-width: 600px) {
+    
+    .map__wrap {
+        display: none;
+    }
+    
+    .report {
+        width: 95%;
+    }
+}
+
