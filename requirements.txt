@@ -19,7 +19,7 @@ psycopg2-binary==2.7.5
 PyPDF2==1.26.0
 pytz==2018.5
 redis==2.10.6
-reportlab==3.5.9
+reportlab==3.5.55
 requests==2.19.1
 six==1.11.0
 tornado==5.1.1
